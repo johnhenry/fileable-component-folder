@@ -32,7 +32,7 @@ const Folder = async function* ({
                 content,
                 folder_context,
                 mode
-            } of new child.type({
+            } of child.type({
                 ...props,
                 incremental:false,
                 folder_context: name,
@@ -66,7 +66,7 @@ const Folder = async function* ({
         };
         for (const child of children) {
             const { props } = child;
-            yield* new child.type({
+            yield* child.type({
                 ...props,
                 folder_context: `${folder_context}/${name}`,
                 template_context
