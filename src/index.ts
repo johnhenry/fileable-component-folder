@@ -27,7 +27,7 @@ const Folder = async function* ({
             for await (const {
                 directive,
                 target,
-                name,
+                name:name0,
                 append,
                 content,
                 folder_context,
@@ -40,10 +40,10 @@ const Folder = async function* ({
             })) {
                 switch (directive) {
                     case 'FILE': {
-                        archiveFile.file(join(folder_context, name), content);
+                        archiveFile.file(join(folder_context, name0), content);
                     } break;
                     case 'FOLDER': {
-                        archiveFile.folder(join(folder_context, name));
+                        archiveFile.folder(join(folder_context, name0));
                     } break;
                 }
             }
