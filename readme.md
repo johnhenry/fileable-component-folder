@@ -1,31 +1,27 @@
+![fileable logo](./static/docs/logo.png)
+
 # Fileable Component: Folder
 
-### Component:Folder
-
-The Folder component represents a Folder;
-
-```javascript
-import {Folder} from 'fileable';
-const template = ()=><Folder name='project/'/>
-```
+[fileable](https://github.com/isaacs/fileable) template component used to create folders.
 
 Folders can contain files and other folders
 
 ```javascript
+import File from 'fileable-component-file';
+import Folder from 'fileable-component-folder';
 const template = ()=><Folder name='project/'>
     <File name='empty_file'/>
     <Folder name='empty_folder'/>
 </Folder>
 ```
 
-#### Folder Attribute: name
+## Attributes
 
-Similar to File name.
+### name
 
 A folder must have a name attribute.
-In the future, we may recursively create a folder's name based on the hash of a folder's conetent.
 
-#### Folder Attribute: zip
+### zip
 
 Archives can be created with using the zip attribute
 
@@ -35,9 +31,9 @@ const template = ()=><Folder name='project' zip>
 </Folder>
 ```
 
-#### Folder Attribute: extension
+### extension
 
-Similar to File extension.
+Extension appended to name.
 
 ```javascript
 const template = ()=><Folder name='project' zip extension='.zip'>
@@ -47,3 +43,8 @@ const template = ()=><Folder name='project' zip extension='.zip'>
 ## API
 
 ### Table of contents
+## Todo
+
+- remove unnecessary dependencies
+- add proper typescript typeings
+- add 'src' attribute
