@@ -1,5 +1,4 @@
 import { join } from 'path';
-import { createComponent } from 'fileable-components';
 import JSZip from 'jszip';
 const Folder = async function* ({
     name,
@@ -74,4 +73,5 @@ const Folder = async function* ({
         }
     }
 };
-export default createComponent(Folder);
+Folder['FILEABLE COMPONENT'] = true;
+export default Folder;

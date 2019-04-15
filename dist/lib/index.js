@@ -3,7 +3,6 @@
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var path = require('path');
-var fileableComponents = require('fileable-components');
 var JSZip = _interopDefault(require('jszip'));
 
 const Folder = async function* ({
@@ -79,6 +78,6 @@ const Folder = async function* ({
         }
     }
 };
-var index = fileableComponents.createComponent(Folder);
+Folder['FILEABLE COMPONENT'] = true;
 
-module.exports = index;
+module.exports = Folder;
