@@ -2,7 +2,7 @@
 
 # Fileable Component: Folder
 
-[fileable](https://github.com/isaacs/fileable) template component used to create folders.
+[Fileable](https://github.com/isaacs/fileable) template component used to create folders.
 
 Folders can contain files and other folders
 
@@ -20,6 +20,10 @@ const template = ()=><Folder name='project/'>
 ### name
 
 A folder must have a name attribute.
+
+```javascript
+const template = ()=><Folder name='empty_folder' />
+```
 
 ### zip
 
