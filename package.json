@@ -31,6 +31,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "fileable-iterator": "0.0.2",
     "jszip": "3.2.1"
   },
   "devDependencies": {

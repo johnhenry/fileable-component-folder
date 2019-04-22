@@ -1,5 +1,7 @@
 import { join } from 'path';
 import JSZip from 'jszip';
+import iterator from 'fileable-iterator';
+
 const Folder = async function* ({
     name,
     extension,
@@ -64,9 +66,7 @@ const Folder = async function* ({
             folder_context
         };
         for (const child of children) {
-            const { props } = child;
-            yield* child.type({
-                ...props,
+            yield* iterator( child, {
                 folder_context: `${folder_context}/${name}`,
                 template_context
             });

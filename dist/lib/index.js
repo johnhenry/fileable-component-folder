@@ -4,6 +4,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var path = require('path');
 var JSZip = _interopDefault(require('jszip'));
+var iterator = _interopDefault(require('fileable-iterator'));
 
 const Folder = async function* ({
     name,
@@ -69,9 +70,7 @@ const Folder = async function* ({
             folder_context
         };
         for (const child of children) {
-            const { props } = child;
-            yield* child.type({
-                ...props,
+            yield* iterator( child, {
                 folder_context: `${folder_context}/${name}`,
                 template_context
             });
